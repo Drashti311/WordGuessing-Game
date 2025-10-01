@@ -1,0 +1,56 @@
+{
+    "easy": [
+        "DDLJ",
+        "PK",
+        "FAN",
+        "3 IDIOTS",
+        "BABY",
+        "BARFI",
+        "PINK",
+        "JODHA AKBAR",
+        "DEVDAS",
+        "DRISHYAM",
+        "TANHAJI",
+        "DANGAL",
+        "GOLMAAL",
+        "WAR"
+        
+    ],
+    "hard": [
+         
+        "TAARE ZAMEEN PAR",
+        "MUNNA BHAI MBBS",
+        "RANG DE BASANTI",
+        "BAJRANGI BHAIJAAN",
+        "KAHO NA PYAR HAI",
+        "OM SHANTI OM",
+        "ZINDAGI NA MILEGI DOBARA",
+        "BHAAG MILKHA BHAAG",
+        "STUDENT OF THE YEAR",
+        "CHAK DE INDIA",
+        "BADRINATH KI DULHANIA"
+        
+    ],
+    "medium": [
+        
+        "PATHAN",
+        "BATLA HOUSE",
+        "JERSEY",
+        "SHERSHAH",
+        "RAAZ REBOOT",
+        "CHHICHHORE",
+        "MADRAS CAFE",
+        "AGNEEPATH",
+        "KHATTA MEETHA",
+        "BADLA",
+        "KEDARNATH",
+        "GULLY BOY",
+        "VEER",
+        "NEERJA",
+        "TALAASH",
+        "HAIDER",
+        "ANDHADHUN"
+        
+        
+    ]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Guessing Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Welcome Screen-->
+  <section id="welcome-screen">
+    <h1>Word Guessing Game 😇</h1>
+    <button id="start-button">Start Playing</button>
+    <button id="scoreboard-button">View Scoreboard</button>
+  </section>
+
+  <!--Category And Difficulty Selection-->
+  <section id="selection-screen" style="display: none;">
+    <h2>Choose Category 🎯</h2>
+    <div class="custom-dropdown" id="category-dropdown">
+      <div class="selected">🍎 Fruits</div>
+      <div class="options">
+        <div data-value="Fruits">🍎 Fruits</div>
+        <div data-value="Movies">🎬 Movies</div>
+        <div data-value="Songs">🎵 Songs</div>
+        <div data-value="Sports">⚽ Sports</div>
+        <div data-value="Animals">🐯 Animals</div>
+      </div>
+    </div>
+
+
+    <h2>Choose Difficulty ⚡</h2>
+    <div class="difficulty-buttons">
+      <button class="difficulty" data-level="easy">Easy</button>
+      <button class="difficulty" data-level="medium">Medium</button>
+      <button class="difficulty" data-level="hard">Hard</button>
+    </div>
+    <br>
+    <!--Back Arrow For Selection-->
+    <button id="back-to-welcome-from-selection">🔙</button>
+  </section>
+
+  <!-- Game Section -->
+  <section id="game-section" style="display: none; text-align: center;">
+    <h2 id="word-display">_ _ _ _</h2>
+    <p id="attempts">Attempts Left: 0 ❤️</p>
+    <p id="score">Score: 0</p>
+    <input type="text" id="guess-input" placeholder="Enter a letter or word" maxlength="20">
+    <br><br>
+    <button id="guess-button">✅ Guess</button>
+    <button id="hint-button">Use Hint 🔎</button>
+    <button id="reveal-button">👀 Reveal Word</button>
+    <button id="next-word-button">Next Word ➡️</button>
+    <p id="message"></p>
+    <br>
+    <!-- Quit -->
+    <button id="quit-button">Quit </button>
+  </section>
+
+  <!-- Scoreboard Section -->
+  <section id="scoreboard-screen" style="display: none;">
+    <h2>🏆 Your Scoreboard</h2>
+    <ul id="score-list"></ul>
+    <button id="clear-scoreboard">🗑️ Clear</button>
+    <!-- Back Arrow For Scoreboard -->
+    <button id="back-to-welcome-from-scoreboard">🔙</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
