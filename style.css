@@ -1,8 +1,21 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 2%;
 }
+
+h1,
+h2 {
+  font-family: 'Baloo 2', sans-serif;
+}
+
+body,
+p,
+input,
+button {
+  font-family: 'Quicksand', sans-serif;
+}
+
 
 body {
   display: flex;
@@ -11,68 +24,68 @@ body {
   min-height: 100vh;
   background: linear-gradient(to top, #d9f0e1 0%, #a8e6cf 100%);
   color: #3a3a3a;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 20px 10px;
 }
-
-/*Sections (Cards)*/
 
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: #fff9f0;
-  padding: 50px 40px;
-  border-radius: 25px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  min-width: 350px;
+  width: 50%;
   max-width: 500px;
-  position: relative;
-  z-index: 10;
+  background: #fafaf6;
+  padding-right: 3.5%;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-h1,h2 {
-  margin-bottom: 20px;
+h1,
+h2 {
+  margin-bottom: 15px;
   font-weight: 700;
+  font-size: 1.6rem;
   color: #3a3a3a;
   text-shadow: 1px 1px 2px #fffef0;
 }
 
 input[type="text"] {
-  padding: 12px;
-  border-radius: 15px;
+  padding: 4%;
+  border-radius: 12px;
   border: 2px solid #fbdc7c;
-  width: 80%;
+  width: 95%;
   text-align: center;
-  font-size: 16px;
+  font-size: 1rem;
   background: #fffef0;
   color: #3a3a3a;
+  margin-bottom: 15px;
+  font-weight: 700;
+  outline: none;
 }
 
 .custom-dropdown {
   position: relative;
-  width: 80%;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px auto;
+  margin-left: 1.5%;
 }
 
 .custom-dropdown .selected {
   padding: 12px 15px;
-  border-radius: 15px;
+  border-radius: 12px;
   border: 2px solid #fbdc7c;
   background: #fffef0;
   cursor: pointer;
   color: #3a3a3a;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .custom-dropdown .options {
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 0;
   right: 0;
   background: #fff9f0;
   border: 2px solid #fbdc7c;
-  border-radius: 15px;
+  border-radius: 12px;
   display: none;
   max-height: 200px;
   overflow-y: auto;
@@ -82,27 +95,29 @@ input[type="text"] {
 .custom-dropdown .options div {
   padding: 10px 15px;
   cursor: pointer;
-
 }
 
 .custom-dropdown .options div:hover {
   background: #fce7b9;
 }
 
+.custom-dropdown .selected::after {
+  content: "▼";
+  float: right;
+  font-size: 0.9em;
+  color: #574964;
+}
+
 #message {
-  margin-top: 15px;
+  margin-top: 12px;
   font-weight: 700;
-  text-shadow: 1px 1px 2px #00000030;
+  color: indianred;
 }
 
-#message.win {
-  font-size: 1.6rem;
-  color: #ff91b1;
-  text-shadow: 0 0 6px #a3d9ff, 0 0 12px #ffcd4b;
-  animation: bounce 0.8s ease;
-}
 
-#score,#attempts {
+/* Score */
+#score,
+#attempts {
   margin: 8px 0;
   font-weight: 600;
 }
@@ -110,43 +125,64 @@ input[type="text"] {
 #score-list {
   list-style: none;
   padding: 0;
-  width: 100%;
+  width: 85%;
+  padding-left: 19%;
 }
 
 #score-list li {
   background: #fff5e5;
-  padding: 12px 18px;
-  margin: 6px 0;
-  border-radius: 15px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+  font-size: 0.95rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* Buttons */
 button {
   background: #fbe8a6;
   border: none;
-  border-radius: 20px;
-  padding: 14px 28px;
+  border-radius: 12px;
+  padding: 12px 20px;
   margin: 6px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   color: #3a3a3a;
   transition: all 0.3s ease;
+  width: 60%;
 }
 
 button:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-2px) scale(1.03);
   background: #fceaaa;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.custom-dropdown .selected::after {
-  content: "▼";
-  float: right;
-  margin-right: 2px;
-  font-size: 0.9em;
-  color: #574964;
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  section {
+    padding: 15px 12px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 15px;
+  }
+
+  #score-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
 }

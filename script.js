@@ -47,7 +47,10 @@ const selected = categoryDropdown.querySelector(".selected");
 const optionsContainer = categoryDropdown.querySelector(".options");
 
 // Show message
-function showMessage(msg) { message.textContent = msg; }
+function showMessage(msg) {
+  message.textContent = msg;
+}
+
 
 // Update display
 function updateDisplay() {
@@ -215,6 +218,7 @@ document.getElementById("reveal-button").addEventListener("click", () => {
 
 // Next word
 document.getElementById("next-word-button").addEventListener("click", startNextWord);
+
 
 // Check game status
 function checkGameStatus() {
