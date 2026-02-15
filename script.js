@@ -51,7 +51,6 @@ function showMessage(msg) {
   message.textContent = msg;
 }
 
-
 // Update display
 function updateDisplay() {
   wordDisplay.textContent = displayedWord.split('').join(' ');
